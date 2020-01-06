@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "name": "blog",
+  "public": true,
   "builds": [
     {
       "src": "nuxt.config.js",
