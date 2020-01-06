@@ -3,7 +3,8 @@
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@halilyuce/blog"
+      "use": "@halilyuce/blog",
+      "config": {}
     }
   ]
 }
