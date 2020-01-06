@@ -12,6 +12,9 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "test": "jest"
   },
+  "engines": {
+    "node": "12.x"
+  },
   "dependencies": {
     "nuxt": "^2.0.0",
     "ant-design-vue": "^1.1.10",
