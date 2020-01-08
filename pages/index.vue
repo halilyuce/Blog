@@ -23,8 +23,7 @@ export default {
   methods: {
     async loadPosts() {
       const response = await this.$axios.$get('/api/posts')
-      console.log(response)
-      this.posts = response.posts
+      this.posts = response.data
     }
   }
 }

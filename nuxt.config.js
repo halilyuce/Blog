@@ -1,8 +1,6 @@
 export default {
   mode: 'universal',
-  serverMiddleware: [
-    '~/api/index.js'
-  ],
+  serverMiddleware: ['~/api/index.js'],
   /*
    ** Headers of the page
    */
@@ -52,8 +50,7 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {
-  },
+  axios: {},
   /*
    ** Build configuration
    */
