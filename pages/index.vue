@@ -11,21 +11,19 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   data() {
     return {
       posts: []
     }
   },
-  mounted() {
+  created() {
     this.loadPosts()
   },
   methods: {
     async loadPosts() {
-      const response = await axios.get('/api/posts')
-      this.posts = response.data
+      const response = await this.$axios.$get('/api/posts')
+      this.posts = response.data.posts
     }
   }
 }

@@ -7,7 +7,7 @@
       "use": "@now/static-build"
     },
     {
-      "src": "api/routes/**/*.js",
+      "src": "api/**/*.js",
       "use": "@now/node"
     }
   ],
@@ -17,8 +17,8 @@
     }
   },
   "routes": [
-    { "src": "/api/posts(.*)", "dest": "api/routes/posts" },
-    { "src": "/api/(.*)", "dest": "api/routes/$1" },
+    { "src": "/api/posts(.*)", "dest": "api/posts" },
+    { "src": "/api/(.*)", "dest": "api/$1" },
     { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
     { "src": "/(.*)", "dest": "$1" }
   ]
