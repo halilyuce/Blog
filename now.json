@@ -1,12 +1,25 @@
 {
   "version": 2,
   "name": "blog",
-  "public": true,
   "builds": [
     {
-      "src": "nuxt.config.js",
-      "use": "@nuxtjs/now-builder",
-      "config": {}
+      "src": "package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": "api/routes/**/*.js",
+      "use": "@now/node"
     }
+  ],
+  "build": {
+    "env": {
+      "API_URL": "https://xalo.now.sh"
+    }
+  },
+  "routes": [
+    { "src": "/api/posts(.*)", "dest": "api/routes/posts" },
+    { "src": "/api/(.*)", "dest": "api/routes/$1" },
+    { "src": "/_nuxt/.+", "headers": { "cache-control": "s-maxage=31536000" } },
+    { "src": "/(.*)", "dest": "$1" }
   ]
 }
